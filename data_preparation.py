@@ -84,7 +84,7 @@ def gen_series(path, batch_size=2, shuffle = True):
         lbls = np.array(lbls)
         yield imgs, lbls
 
-trrain_data = gen_series('data') 
+trrain_data = gen_series('data', batch_size=batch_size) 
 
 
 model = keras.applications.InceptionV3(include_top=True)
